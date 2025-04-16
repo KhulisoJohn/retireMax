@@ -11,7 +11,6 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Team Structure](#team-structure)
 - [How It Works](#how-it-works)
 - [Usage](#usage)
 - [Installation](#installation)
@@ -44,22 +43,6 @@ The **Two-Pot Retirement Estimator** is a web-based tool designed to help users 
 
 ---
 
-## Team Structure
-
-- **Team Name:** Codex  
-- **Organization:** Techbridle Foundation   
-- **Software Delivery Manager:** [Lindy Heyns](https://github.com/lindy-heyns)
-- **Mentor:** [John Njezi](https://github.com/njezi-techbridle)
-- **Project Manager:** [Oluwafemi Otusanya](https://github.com/codewithfemi)
-
-### Developers (Team Codex)
-- [Khomotso Jonathan Gole](https://github.com/JonathanG1993)
-- [Thavhiwa Khuliso John](https://github.com/KhulisoJohn)
-- [Mmolotsi Ntshabele](https://github.com/Mmolotsi-tech)
-- [Phatheka Sineke](https://github.com/PhathekaSineke)
-- [Sabelo Mawela](https://github.com/SabeloMawela-SM)
-
----
 
 ## How It Works
 1. The user inputs retirement-related data (e.g., total savings).
@@ -83,7 +66,7 @@ The **Two-Pot Retirement Estimator** is a web-based tool designed to help users 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Techbridle-Foundation-Org/tf-two-pot-retirement-calculator.git
+   git clone https://github.com/KhulisoJohn/retirement-calculator.git
 
 2. Open the project folder.
 

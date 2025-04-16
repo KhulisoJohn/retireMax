@@ -1,0 +1,162 @@
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Ensure it's not too wide */
+    margin: auto;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  /* Dark Mode Toggle Positioning */
+  .dark-mode-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  
+  #darkModeToggle,
+  #lightModeToggle {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Dark/Light Mode Styling */
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Main Section Styling */
+  .main {
+    padding-top: 100px; 
+  }
+ label {
+    color: #000;
+ }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Logo img {
+    height: 32px;
+    margin-right: 10px;
+}
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    display: inline;
+}
+.footer-links a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.divider {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #363434;
+}
+.footer-info {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+.footer-info a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+.footer-links a .bi{
+    font-size: 25px;
+}
+
+.dark-mode .footer {
+    background-color: #222;
+    border-bottom: 1px solid #444;
+    color: white;
+}
+
+
+@media (max-width: 900px) {
+
+    .custom-container {
+      display: grid;
+      margin: 0 20px;
+    }
+  
+    .custom-container > * {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile Styling */
+  @media (max-width: 780px) {
+    .custom-container {
+         margin: 0 1px;
+      }
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .dark-mode-toggle {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+  
+    .logo img {
+      width: 40px;
+    }
+  }
+  

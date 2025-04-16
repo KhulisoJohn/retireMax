@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="CodexTeam" />
+    <meta name="description" content="Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System." />
+    <title>Two Pot Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light-mode">
+    <!-- Header Section -->
+    <header class="navbar bg-light fixed-top">
+      <div class="container flex flex-row">
+        <div class="">
+          <a href="#" class="logo d-flex align-items-center">
+            <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo" />
+            <span class="title ms-2">Two Pot Calculator</span>
+          </a>
+        </div>
+       
+        <div class="dark-mode-toggle" id="Toggle">
+        <i id="darkModeToggle" class="bi bi-moon-fill text-primary" aria-label="Toggle dark mode"></i>
+        <i id="lightModeToggle" class="bi bi-brightness-high-fill text-primary d-none" aria-label="Toggle light mode"></i>
+      </div>
+  </div>
+</header>
+<!-- Main Section -->
+<main class="pt-5 mt-5">
+  <div class="container">
+    <div class="custom-container row g-4 pb-4">
+      <div class="col-12 col-md-6 pt-4 form" id="retirementForm">
+        <h2 class="">Calculate the estimated tax on your withdrawal</h2>
+        <p>
+          Use this calculator to see the estimated marginal income tax on the amount you want to withdraw from your savings component.
+          This calculator is for illustrative purposes only. Please consult a financial adviser before making any decisions.
+        </p>
+        <form class="form g-3 needs-validation" novalidate>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number1" placeholder="Current age" required />
+            <label for="number1">Current Age</label>
+            <div class="invalid-feedback" id="error1">Please enter a valid current age.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number2" placeholder="Retirement Age" required />
+            <label for="number2">Retirement Age</label>
+            <div class="invalid-feedback" id="error2">Please enter a valid retirement age greater than current age.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number3" placeholder="Gross Monthly Income" required />
+            <label for="number3">Gross Monthly Income</label>
+            <div class="invalid-feedback" id="error3">Please enter a valid gross monthly income.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number4" placeholder="Monthly Retirement Contribution" required />
+            <label for="number4">Monthly Retirement Contribution</label>
+            <div class="invalid-feedback" id="error4">Please enter a valid monthly retirement contribution.</div>
+            <p class="info"><i class="bi bi-info-circle-fill"></i> 1/3 of this amount is allocated to the savings component.</p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number5" placeholder="Savings Component Value" required />
+            <label for="number5">Savings Component Value</label>
+            <div class="invalid-feedback" id="error5">Please enter a valid savings component value.</div>
+            <p class="info"><i class="bi bi-info-circle-fill"></i> Current estimated savings component value.</p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number6" placeholder="Requested Withdrawal Amount" required />
+            <label for="number6">Requested Withdrawal Amount</label>
+            <div class="invalid-feedback" id="error6">Please enter a valid withdrawal amount between R2,500 and the savings component value.</div>
+            <p class="alertMsg">Minimum of R2,500. Maximum cannot exceed the amount in your savings component.</p>
+          </div>
+          <div>
+            <button class="btn btn-primary w-20" type="submit">Calculate</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 d-md-block results rounded pt-4 px-4 pb-2" id="resultsContainer">
+        <div id="previewSection" class="showResult">
+          <div class="row mb-4 grid-switch">
+            <div class="col-md-6">
+              <code>Estimated Income Tax on Withdrawal Amount</code>
+              <h2 class="text-primary">R 00.00</h2>
+              <p>Requested withdrawal amount will be reduced by this amount</p>
+            </div>
+      
+            <div class="col-md-6 border-covered">
+              <code>Estimated Withdrawal Benefit Paid to You</code>
+              <h2 class="text-primary">R 00.00</h2>
+              <p>Requested withdrawal amount less estimated income tax</p>
+            </div>
+          </div>
+      
+          <hr class="mt-2 mb-3">
+      
+          <div class="m-0">
+            <h5>Current value of savings component:</h5>
+            <br>
+      
+            <!-- Before withdrawal -->
+            <div class="d-flex justify-content-between align-items-center mt-3 mb-1">
+              <p class="mb-0 text1">Before withdrawal:</p>
+              <strong class="before-withdraw">R 00.00</strong>
+            </div>
+            <div class="progress mb-1">
+              <div class="progress-bar" role="progressbar"></div>
+            </div>
+            
+      
+            <!-- After withdrawal -->
+            <div class="d-flex justify-content-between align-items-center mt-3 mb-1">
+              <p class="mb-0 text2">After withdrawal:</p>
+              <strong class="after-withdraw">R 0.00</strong>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" role="progressbar"></div>
+            </div>
+            <br>
+      
+            <hr>
+            <br>
+            <h5>Illustrative future value of savings component at retirement:</h5>
+            <br>
+      
+            <!-- Before future -->
+            <div class="d-flex justify-content-between align-items-center mt-3 mb-1">
+              <p class="mb-0 text3">Before withdrawal:</p>
+              <strong class="before-future">R 00.00</strong>
+            </div>
+            <div class="progress mb-1">
+              <div class="progress-bar" role="progressbar"></div>
+            </div>
+            
+      
+            <!-- After future -->
+            <div class="d-flex justify-content-between align-items-center mt-3 mb-1">
+              <p class="mb-0 text4">After withdrawal:</p>
+              <strong class="after-future">R 00.00</strong>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" role="progressbar"></div>
+            </div>
+          </div>
+      
+          <p class="mt-3 text-muted small text-center mb-0">
+            This calculation has been made using 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#assumptionsModal">assumptions</a>.
+          </p>
+        </div>
+      </div>
+      
+      
+  </div>
+  <!-- Assumptions Modal -->
+  <div class="modal fade" id="assumptionsModal" tabindex="-1" aria-labelledby="assumptionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="assumptionsModalLabel">Calculation Assumptions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Inflation rate is assumed to be 6% annually.</li>
+            <li>Return on investment is projected at 8% annually.</li>
+            <li>Tax rates are estimated based on income brackets.</li>
+            <li>These assumptions may not reflect actual market conditions.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Footer -->
+<footer class="footer mt-4 bg-light">
+  <div class="Container flex flex-row">
+    <div class="footer-top mx-4">
+      
+<div>
+    
+        <a href="#" class="Logo">
+          <img id="Logo" src="./assets/light-logo.png" alt="Logo" />
+          <span>Two Pot Calculator</span>
+        </a>
+      </div>
+      
+      <ul class="footer-links">
+        <li><a href="https://x.com/techbridleorg" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
+        <li><a href="https://web.facebook.com/techbridleorg/?_rdc=1&_rdr#" target="_blank"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="https://www.youtube.com/@techbridleorg" target="_blank"><i class="bi bi-youtube"></i></a></li>
+      </ul>
+    </div>
+    <hr class="divider">
+    <div class="footer-info">
+      <p>Author: CodexTeam</p>
+      <p>Copyright &copy; 2025 Techbridle. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="main.js"></script>
+  </body>
+</html>

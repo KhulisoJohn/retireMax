@@ -5,7 +5,7 @@
 ![Responsive](https://img.shields.io/badge/ui-Responsive%20Design-blue)
 ![License](https://img.shields.io/badge/license-Techbridle%20Foundation-lightgrey)
 
-### Built by **Team Codex** under the supervision of **Techbridle Foundation**
+### Built by **KhulisoJohn** under the supervision of **Techbridle Foundation**
 
 ## Table of Contents
 - [Overview](#overview)

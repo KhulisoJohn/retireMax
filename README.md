@@ -1,4 +1,4 @@
-# ReatireMax Retirement Estimator
+# RetireMax Retirement Estimator
 
 ![Status](https://img.shields.io/badge/status-inprogress-brightgreen)
 ![Mode](https://img.shields.io/badge/mode-Dark%20%26%20Light-blueviolet)

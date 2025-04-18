@@ -1,4 +1,4 @@
-# Two-Pot Retirement Estimator
+# ReatireMax Retirement Estimator
 
 ![Status](https://img.shields.io/badge/status-inprogress-brightgreen)
 ![Mode](https://img.shields.io/badge/mode-Dark%20%26%20Light-blueviolet)
@@ -21,7 +21,7 @@
 
 ## Overview
 
-The **Two-Pot Retirement Estimator** is a web-based tool designed to help users estimate their retirement plan under the new "two-pot system." The tool allows users to project their retirement savings, automatically split them into two pots, and calculate tax values based on withdrawal requests. This project aims to simplify retirement planning by offering clear estimations and immediate feedback to users.
+The **RetireMax Retirement Estimator** is a web-based tool designed to help users estimate their retirement plan under the new "two-pot system." The tool allows users to project their retirement savings, automatically split them into two pots, and calculate tax values based on withdrawal requests. This project aims to simplify retirement planning by offering clear estimations and immediate feedback to users.
 
 ---
 
@@ -66,7 +66,7 @@ The **Two-Pot Retirement Estimator** is a web-based tool designed to help users 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/KhulisoJohn/retirement-calculator.git
+   git clone https://github.com/KhulisoJohn/retireMax.git
 
 2. Open the project folder.
 
